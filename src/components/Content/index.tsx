@@ -1,14 +1,16 @@
 import { View, StyleSheet } from 'react-native';
-import { Surface, Text } from 'react-native-paper';
+import { Surface, Text, useTheme } from 'react-native-paper';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export function Content() {
+  const theme = useTheme();
+
   return (
     <View style={styles.container}>
       <View style={styles.moneyInfo}>
         <Surface mode='elevated' style={styles.surface}>
-          <Icon name='currency-usd' color='#3dc67c' size={30} />
+          <Icon name='currency-usd' color={theme.colors.success} size={30} />
           <View>
             <Text style={styles.type}>Receita</Text>
             <Text style={styles.currency}>R$ 4.231.00</Text>
