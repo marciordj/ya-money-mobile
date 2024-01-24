@@ -1,5 +1,11 @@
-import { Home } from './src';
+import { PaperProvider } from 'react-native-paper';
+
+import { Home } from './src/Home';
 
 export default function App() {
-  return <Home />;
+  return (
+    <PaperProvider>
+      <Home />
+    </PaperProvider>
+  );
 }
